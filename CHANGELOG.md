@@ -2,6 +2,21 @@
 
 Bridge version numbers are separate from the Microsoft Store app version. See https://kikutune.com/changelog for the app's release notes.
 
+## [1.2.0] — 2026-10-20
+
+### One KikuTune Bridge
+
+- One installer, `KikuTuneBridgeSetup-1.2.0.exe`, replaces the separate Bridge 1.0.4 and Bridge with Noise Control 1.1.4 downloads. It carries Sound Enhancements and the Noise Control driver.
+- A single Install button. With Secure Boot off, setup adds Noise Control (Test Mode, one restart). With Secure Boot on, or when Windows refuses Test Mode, it installs the Bridge and Sound Enhancements instead of failing and links the Secure Boot guide.
+- Updating over 1.0.x or 1.1.x keeps an installed healthy driver; driver binaries are unchanged.
+
+### Requirements and limitations
+
+- Requires Microsoft Store KikuTune 1.2.0 or later for Noise Control and AAP integration.
+- Noise Control's test-signed driver requires Windows Test Mode and Secure Boot off.
+- Installer is unsigned; SmartScreen or managed policies may warn or block it.
+- Off is applied only when it is allowed as a listening mode for the AirPods on the iPhone.
+
 ## [1.1.4] — 2026-10-20
 
 ### Bridge with Noise Control
@@ -37,5 +52,6 @@ Bridge version numbers are separate from the Microsoft Store app version. See ht
 - BLE-only ear detection retains hardware-dependent limitations.
 - Standard Bridge 1.0.3, without the driver or Test Mode requirement, is available separately at https://kikutune.com/bridge.
 
+[1.2.0]: https://github.com/DarrosHere/KikuTune/releases/tag/v1.2.0
 [1.1.4]: https://github.com/DarrosHere/KikuTune/releases/tag/v1.1.4
 [1.1.3]: https://github.com/DarrosHere/KikuTune/releases/tag/v1.1.3
