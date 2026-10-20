@@ -7,7 +7,7 @@
   </p>
   <p>
     <a href="https://kikutune.com">Official website</a> ·
-    <a href="https://github.com/DarrosHere/KikuTune/releases/latest">Download KikuTune Bridge</a> ·
+    <a href="https://github.com/DarrosHere/KikuTune/releases/latest">Download Bridge with Noise Control</a> ·
     <a href="https://kikutune.com/guides">Guides</a> ·
     <a href="https://github.com/DarrosHere/KikuTune/issues/new/choose">Feedback &amp; support</a>
   </p>
@@ -23,7 +23,7 @@ Windows can play audio through Bluetooth headphones. KikuTune brings their every
 - **Release to iPhone:** release a supported headphone connection from Windows so you can reconnect on your phone. Reconnection depends on the phone and headphones.
 - **Smart Pause:** pause and resume media through ear detection on supported headphones and compatible media apps.
 - **Equalizer with the free KikuTune Bridge:** ten bands, presets, preamp, balance, and a clipping limiter, with settings for each pair of headphones.
-- **No kernel driver or Windows Test Mode for the standard app and public Bridge:** the optional Bridge installer and per-device Sound Enhancements setup request administrator permission.
+- **Choose your Bridge:** the standard Bridge provides Sound Enhancements without a kernel driver or Windows Test Mode. Bridge with Noise Control adds the optional AAP driver for compatible AirPods and requires Windows Test Mode with Secure Boot off.
 
 Core local controls do not require an account. Feature availability depends on the headphone model, firmware, Bluetooth adapter, Windows configuration, and selected audio endpoint.
 
@@ -59,29 +59,32 @@ The Bridge equalizer requires a compatible playback endpoint and Sound Enhanceme
 
 Get the main app from the [Microsoft Store](https://apps.microsoft.com/detail/9NKKD1FDNLPM). Store updates and the Bridge are distributed separately.
 
-### 2. Add the optional free Bridge for equalizer controls
+### 2. Add the optional free Bridge
 
-1. Download **KikuTuneBridgeSetup-1.0.0.exe** from [GitHub Releases](https://github.com/DarrosHere/KikuTune/releases/latest) or the [official Bridge page](https://kikutune.com/bridge).
-2. Verify the SHA-256 below, then run the installer if you trust this source. The installer requests administrator permission once.
-3. Open KikuTune and set up Sound Enhancements for the headphones you want to equalize. This setup requests administrator permission once per pair.
+The GitHub download is **Bridge with Noise Control 1.1.3**, which includes Sound Enhancements and the optional AAP driver. Use **KikuTune 1.2.0 or later** from Microsoft Store. For Sound Enhancements without the driver, choose **standard Bridge 1.0.3** on the [official Bridge page](https://kikutune.com/bridge).
 
-The Bridge runs as the signed-in user, starts at sign-in, and communicates locally with KikuTune. It installs no kernel driver and does not enable Windows Test Mode. Remove it through **Settings → Apps** when no longer needed.
+1. Download **KikuTuneBridgeNoiseControlSetup-1.1.3.exe** from [GitHub Releases](https://github.com/DarrosHere/KikuTune/releases/latest).
+2. Verify the SHA-256 below, then run the installer. Installation requests administrator permission.
+3. Review the Noise Control requirements: the test-signed driver needs **Windows Test Mode and Secure Boot off**. The installer explains the changes, requires agreement and may request a restart. Follow the [Bridge installation guide](https://kikutune.com/bridge); Secure Boot must be changed manually in firmware settings when required.
+4. Open KikuTune. Compatible AirPods can use Noise Control and AAP ear detection. Set up Sound Enhancements separately for headphones you want to equalize; that setup requests administrator permission once per pair.
+
+The Bridge runs as the signed-in user, starts at sign-in, and communicates locally with KikuTune. Version 1.1.3 fixes AAP initialization after a fresh Windows boot. BLE-only ear detection retains model-dependent limitations. Remove the Bridge through **Settings → Apps** when no longer needed.
 
 ### Verify your download
 
 In PowerShell, open the folder containing your download and run:
 
 ```powershell
-Get-FileHash .\KikuTuneBridgeSetup-1.0.0.exe -Algorithm SHA256
+Get-FileHash .\KikuTuneBridgeNoiseControlSetup-1.1.3.exe -Algorithm SHA256
 ```
 
 Expected SHA-256:
 
 ```text
-d4ea63a1be7266bddc5715e7e10127c719b756618166a2c049d866b0468d5273
+C7A28DC2B43D23CD2CC41B914FB56EBE319DAD4FF26CD19E0B0F01A541D86F69
 ```
 
-[VirusTotal report for this exact SHA-256](https://www.virustotal.com/gui/file/d4ea63a1be7266bddc5715e7e10127c719b756618166a2c049d866b0468d5273): **0/69 detections** in the existing October 8, 2026 analysis, checked October 20, 2026. A scan is a point-in-time result; a matching hash establishes file identity, not a safety guarantee.
+This is the same installer hosted at the [official versioned download URL](https://download.kikutune.com/bridge/1.1.3/KikuTuneBridgeNoiseControlSetup-1.1.3.exe). Its complete file hash was checked against the locally tested installer.
 
 **Windows SmartScreen:** this Bridge installer is not code-signed, so Windows may display “Windows protected your PC.” Check the source and hash first. If you choose to continue, SmartScreen may offer **More info → Run anyway**. Smart App Control or a managed PC policy may block unsigned software outright; the Bridge may be unavailable on that PC.
 
