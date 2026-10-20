@@ -53,8 +53,6 @@ KikuTune includes device families for AirPods, Beats, Sony, Bose, JBL, and other
 
 The Bridge equalizer requires a compatible playback endpoint and Sound Enhancements setup. Replicas and devices using different chipsets may identify as another model or omit telemetry. [Request support for your model](https://github.com/DarrosHere/KikuTune/issues/1) with your actual results.
 
-**PC noise control (ANC / Transparency) is planned.** It is not included in the public Bridge 1.0.0 installer. See the [roadmap](https://github.com/DarrosHere/KikuTune/issues/2).
-
 ## Download & installation
 
 ### 1. Install KikuTune
@@ -98,7 +96,7 @@ d4ea63a1be7266bddc5715e7e10127c719b756618166a2c049d866b0468d5273
 ## Feedback & community
 
 - [Request headphone support or report battery detection issues](https://github.com/DarrosHere/KikuTune/issues/1)
-- [Roadmap: PC noise control and Pro tier](https://github.com/DarrosHere/KikuTune/issues/2)
+- [Feature suggestions & feedback](https://github.com/DarrosHere/KikuTune/issues/2)
 - [Report a bug or request a feature](https://github.com/DarrosHere/KikuTune/issues/new/choose)
 - [Join Discussions](https://github.com/DarrosHere/KikuTune/discussions)
 - Contact: **support@kikutune.com**

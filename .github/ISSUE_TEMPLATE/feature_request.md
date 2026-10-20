@@ -18,4 +18,4 @@ How do you handle this today?
 ## Devices and context
 Include your headphone model and Windows version if relevant.
 
-Check the pinned roadmap before submitting a duplicate. Roadmap items have no guaranteed release date unless explicitly announced.
+Check existing issues before submitting a duplicate.
