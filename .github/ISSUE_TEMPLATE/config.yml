@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup guides and troubleshooting
+    url: https://kikutune.com/guides
+    about: Check pairing, battery, audio, and Bridge setup guides.
+  - name: Community discussions
+    url: https://github.com/DarrosHere/KikuTune/discussions
+    about: Ask general questions and discuss how you use KikuTune.
