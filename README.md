@@ -61,30 +61,30 @@ Get the main app from the [Microsoft Store](https://apps.microsoft.com/detail/9N
 
 ### 2. Add the optional free Bridge
 
-The GitHub download is **Bridge with Noise Control 1.1.3**, which includes Sound Enhancements and the optional AAP driver. Use **KikuTune 1.2.0 or later** from Microsoft Store. For Sound Enhancements without the driver, choose **standard Bridge 1.0.3** on the [official Bridge page](https://kikutune.com/bridge).
+The GitHub download is **Bridge with Noise Control 1.1.4**, which includes Sound Enhancements and the optional AAP driver. Use **KikuTune 1.2.0 or later** from Microsoft Store. For Sound Enhancements without the driver, choose **standard Bridge 1.0.4** on the [official Bridge page](https://kikutune.com/bridge).
 
-1. Download **KikuTuneBridgeNoiseControlSetup-1.1.3.exe** from [GitHub Releases](https://github.com/DarrosHere/KikuTune/releases/latest).
+1. Download **KikuTuneBridgeNoiseControlSetup-1.1.4.exe** from [GitHub Releases](https://github.com/DarrosHere/KikuTune/releases/latest).
 2. Verify the SHA-256 below, then run the installer. Installation requests administrator permission.
 3. Review the Noise Control requirements: the test-signed driver needs **Windows Test Mode and Secure Boot off**. The installer explains the changes, requires agreement and may request a restart. Follow the [Bridge installation guide](https://kikutune.com/bridge); Secure Boot must be changed manually in firmware settings when required.
 4. Open KikuTune. Compatible AirPods can use Noise Control and AAP ear detection. Set up Sound Enhancements separately for headphones you want to equalize; that setup requests administrator permission once per pair.
 
-The Bridge runs as the signed-in user, starts at sign-in, and communicates locally with KikuTune. Version 1.1.3 fixes AAP initialization after a fresh Windows boot. BLE-only ear detection retains model-dependent limitations. Remove the Bridge through **Settings → Apps** when no longer needed.
+The Bridge runs as the signed-in user, starts at sign-in, and communicates locally with KikuTune. Version 1.1.4 stops leaving temporary status files in ProgramData and keeps the Noise Control mode you choose; 1.1.3 fixed AAP initialization after a fresh Windows boot. BLE-only ear detection retains model-dependent limitations. Remove the Bridge through **Settings → Apps** when no longer needed.
 
 ### Verify your download
 
 In PowerShell, open the folder containing your download and run:
 
 ```powershell
-Get-FileHash .\KikuTuneBridgeNoiseControlSetup-1.1.3.exe -Algorithm SHA256
+Get-FileHash .\KikuTuneBridgeNoiseControlSetup-1.1.4.exe -Algorithm SHA256
 ```
 
 Expected SHA-256:
 
 ```text
-C7A28DC2B43D23CD2CC41B914FB56EBE319DAD4FF26CD19E0B0F01A541D86F69
+AF2FB6CD34CBEB364B520776847303B4BC7701974DA0875225AC9A062FB6A9DC
 ```
 
-This is the same installer hosted at the [official versioned download URL](https://download.kikutune.com/bridge/1.1.3/KikuTuneBridgeNoiseControlSetup-1.1.3.exe). Its complete file hash was checked against the locally tested installer.
+This is the same installer hosted at the [official versioned download URL](https://download.kikutune.com/bridge/1.1.4/KikuTuneBridgeNoiseControlSetup-1.1.4.exe). Its complete file hash was checked against the locally tested installer.
 
 **Windows SmartScreen:** this Bridge installer is not code-signed, so Windows may display “Windows protected your PC.” Check the source and hash first. If you choose to continue, SmartScreen may offer **More info → Run anyway**. Smart App Control or a managed PC policy may block unsigned software outright; the Bridge may be unavailable on that PC.
 
